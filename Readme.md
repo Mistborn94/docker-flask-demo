@@ -1,11 +1,11 @@
-# Packakging a python flask app into docker
+# Packaging a python flask app into docker
 
 ## Prep
 Run `docker pull python:3` at the start of the presentation to start pulling the base image. This might take a while on slower internet. 
 
 ## Part 1
 ### Creating the dockerfile
-Create an empty file called Dockerfile and add the following commands to it. 
+Create an empty file called Dockerfile and add the following commands to it:
 
 1. Set the base image 
     `FROM python:3`
