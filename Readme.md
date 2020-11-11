@@ -15,7 +15,7 @@ Create an empty file called Dockerfile and add the following commands to it:
     `COPY requirements.txt .`
     `RUN pip install -r requirements.txt`
 4. Add the application files
-    `COPY app.pyt .`
+    `COPY app.py .`
 5. Expose a port for the app to run on
     `EXPOSE 5000`
 6. Set the run command
