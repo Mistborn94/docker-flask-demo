@@ -1,14 +1,14 @@
 # Packaging a python flask app into docker
 
 ## Prep
-Run `docker pull python:3` at the start of the presentation to start pulling the base image. This might take a while on slower internet. 
+Run `docker pull python:3-slim` at the start of the presentation to start pulling the base image. This might take a while on slower internet. 
 
 ## Part 1
 ### Creating the dockerfile
-Create an empty file called Dockerfile and add the following commands to it:
+Create an empty file called `Dockerfile` and add the following commands to it:
 
 1. Set the base image 
-    `FROM python:3`
+    `FROM python:3-slim`
 2. Change the working directory
     `WORKDIR /usr/src/app`
 3. Install the dependencies
@@ -32,10 +32,10 @@ Run `docker build . -t my-flask-app` to build your image
 
 ### Change your image
 1. Change the 'Hello World!' return message in app.py to another image
-2. Run `docker build . -d -t my-flask-app` to rebuild your image. Note how the first few steps are read from the cache instead of being rebuilt. 
+2. Run `docker build . -t my-flask-app` to rebuild your image. Note how the first few steps are read from the cache instead of being rebuilt. 
 
 ### Run another container instance 
-1. Run `docker run -p 5001:5000 my-flask-app` to run another container from your image. Note how we are now binding it to port 5001
+1. Run `docker run -d -p 5001:5000 my-flask-app` to run another container from your image. Note how we are now binding it to port 5001
 2. Go to localhost:5001 in your browser to access the new app. 
 2. Go to localhost:5000 in your browser and note that the original app is still running too. 
 
