@@ -7,18 +7,18 @@ Run `docker pull python:3-slim` at the start of the presentation to start pullin
 ### Creating the dockerfile
 Create an empty file called `Dockerfile` and add the following commands to it:
 
-1. Set the base image 
+1. Set the base image  
     `FROM python:3-slim`
-2. Change the working directory
+2. Change the working directory  
     `WORKDIR /usr/src/app`
-3. Install the dependencies
-    `COPY requirements.txt .`
+3. Install the dependencies  
+    `COPY requirements.txt .`  
     `RUN pip install -r requirements.txt`
-4. Add the application files
+4. Add the application files  
     `COPY app.py .`
-5. Expose a port for the app to run on
+5. Expose a port for the app to run on  
     `EXPOSE 5000`
-6. Set the run command
+6. Set the run command  
     `CMD ["python", "./app.py"]`
 
 ### Building the image
