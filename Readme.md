@@ -26,7 +26,7 @@ Run `docker build . -t my-flask-app` to build your image
 
 ### Running the image 
 1. Run `docker run -d -p 5000:5000 my-flask-app` to run a container from your image
-2. Go to localhost:5000 in your browser to access the app. 
+2. Go to http://localhost:5000 in your browser to access the app. 
 
 ## Part 2
 
@@ -36,8 +36,8 @@ Run `docker build . -t my-flask-app` to build your image
 
 ### Run another container instance 
 1. Run `docker run -d -p 5001:5000 my-flask-app` to run another container from your image. Note how we are now binding it to port 5001
-2. Go to localhost:5001 in your browser to access the new app. 
-2. Go to localhost:5000 in your browser and note that the original app is still running too. 
+2. Go to  http://localhost:5001 in your browser to access the new app. 
+2. Go to  http://localhost:5000 in your browser and note that the original app is still running too. 
 
 ### Cleaning up
 1. Run `docker ps` to list the running containers
